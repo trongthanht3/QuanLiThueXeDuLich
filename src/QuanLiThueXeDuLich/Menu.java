@@ -1,11 +1,34 @@
 package QuanLiThueXeDuLich;
 
+import java.util.Scanner;
+
 public class Menu 
 {
-	public static void main(String [] args)
+	private int Selection;
+	public void show()
 	{
-		PhieuThue p1 = new PhieuThue();
-		System.out.print("hello fucker");
-		System.out.println("hello:" + p1.);
+	}
+	
+	public void pick()
+	{
+	}
+	
+	public void clearConsole()
+	{
+		//under maintenance
+	}
+	
+	public void showBaoTri()
+	{
+		System.out.print("Under maintenance!");
+	}
+	
+	public void setSelection(int Selection)
+	{
+		this.Selection = Selection;
+	}
+	public int getSelection()
+	{
+		return this.Selection;
 	}
 }

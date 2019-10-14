@@ -2,13 +2,13 @@ package QuanLiThueXeDuLich;
 
 public class XeDap 
 {
-	private static final int GIATIEN = 100000;
+	private static final int GIATIEN = 200000;
 	private int ThoiGian;
-	private double TienXeDap;
+	private double TienXe;
 	public XeDap()
 	{
 		this.ThoiGian = 0;
-		this.TienXeDap = 0;
+		this.TienXe = 0;
 	}
 	
 	public XeDap(int ThoiGian)
@@ -16,19 +16,19 @@ public class XeDap
 		this.ThoiGian = ThoiGian;
 	}
 	
-	public void TinhTienXeDap()
+	public void TinhTienXe()
 	{
-		this.TienXeDap = this.ThoiGian * XeDap.GIATIEN;
+		this.TienXe = this.ThoiGian * XeDap.GIATIEN;
 	}
-	public double getTienXeDap()
+	public double getTienXe()
 	{
-		return this.TienXeDap;
+		return this.TienXe;
 	}
 	
 	public void setThoiGian(int ThoiGian)
 	{
 		this.ThoiGian = ThoiGian;
-		this.TienXeDap = this.ThoiGian * XeDap.GIATIEN;
+		this.TienXe = this.ThoiGian * XeDap.GIATIEN;
 	}
 	public int getThoiGian()
 	{

@@ -1,10 +1,12 @@
 package QuanLiThueXeDuLich;
 
+import java.util.*;
+
 public class NguoiThue
 {
 	private String Ten;
 	private int Tuoi;
-	private boolean GioiTinh;
+	private int GioiTinh;
 	private String QueQuan;
 	private String CMND;
 	
@@ -12,12 +14,12 @@ public class NguoiThue
 	{
 		this.Ten = "trong";
 		this.Tuoi = 0;
-		this.GioiTinh = false;
+		this.GioiTinh = 0;
 		this.QueQuan = "trong";
 		this.CMND = "trong";
 	}
 	
-	public NguoiThue(String Ten, int Tuoi, boolean GioiTinh, String QueQuan, String CMND)
+	public NguoiThue(String Ten, int Tuoi, int GioiTinh, String QueQuan, String CMND)
 	{
 		this.Ten = Ten;
 		this.Tuoi = Tuoi;
@@ -26,10 +28,29 @@ public class NguoiThue
 		this.CMND = CMND;
 	}
 	
+	public void Nhap()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Ten nguoi thue: ");
+		this.Ten = scan.nextLine();
+		System.out.print("Tuoi: ");
+		this.Tuoi = scan.nextInt();
+		System.out.print("Gioi tinh (0=nam/other=nu): ");
+		this.GioiTinh = scan.nextInt();
+		scan.nextLine();
+		System.out.print("Que quan: ");
+		this.QueQuan = scan.nextLine();
+		System.out.print("CMND: ");
+		this.CMND = scan.nextLine();
+	}
+	
 	public void Xuat()
 	{
-		System.out.print("" + this.Ten
-						);
+		System.out.print("" + this.Ten + " | "
+						+ this.Tuoi + " | "
+						+ getGioiTinhString() + " | "
+						+ this.QueQuan + " | "
+						+ this.CMND);
 	}
 	
 	public void setTen(String Ten)
@@ -50,13 +71,20 @@ public class NguoiThue
 		return this.Tuoi;
 	}
 	
-	public void setGioiTinh(boolean GioiTinh)
+	public void setGioiTinh(int GioiTinh)
 	{
 		this.GioiTinh = GioiTinh;
 	}
-	public boolean getGioiTinh()
+	public int getGioiTinh()
 	{
 		return this.GioiTinh;
+	}
+	public String getGioiTinhString()
+	{
+		if (this.GioiTinh == 0)
+			return "Nam";
+		else
+			return "Nu";
 	}
 	
 	public void setQueQuan(String QueQuan)

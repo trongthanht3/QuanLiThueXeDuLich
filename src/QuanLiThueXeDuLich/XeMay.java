@@ -4,12 +4,12 @@ public class XeMay
 {
 	private static final int GIATIEN = 2500;
 	private double QuangDuong;
-	private double TienXeMay;
+	private double TienXe;
 	
 	public XeMay()
 	{
 		this.QuangDuong = 0;
-		this.TienXeMay = 0;
+		this.TienXe = 0;
 	}
 	
 	public XeMay(int QuangDuong)
@@ -17,19 +17,19 @@ public class XeMay
 		this.QuangDuong = QuangDuong;
 	}
 	
-	public void TinhTienXeMay()
+	public void TinhTienXe()
 	{
-		this.TienXeMay = this.QuangDuong * XeMay.GIATIEN;
+		this.TienXe = this.QuangDuong * XeMay.GIATIEN;
 	}
-	public double getTienXeMay()
+	public double getTienXe()
 	{
-		return this.TienXeMay;
+		return this.TienXe;
 	}
 	
 	public void setQuangDuong(int QuangDuong)
 	{
 		this.QuangDuong = QuangDuong;
-		this.TienXeMay = this.QuangDuong * XeMay.GIATIEN;
+		this.TienXe = this.QuangDuong * XeMay.GIATIEN;
 	}
 	public double getQuangDuong()
 	{
